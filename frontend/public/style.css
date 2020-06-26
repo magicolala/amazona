@@ -37,6 +37,12 @@ body {
     text-decoration: none;
 }
 
+.header-links {
+    display: flex;
+    justify-content: space-around;
+    width: 12rem;
+}
+
 .header-links a {
     color: #ffffff;
 }
@@ -122,6 +128,7 @@ a:hover {
 
 .sidebar {
     position: fixed;
+    transition: all 0.5s ease-in-out;
     transform: translateX(-30rem);
     width: 30rem;
     background: #f0f0f0;
