@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import ProductScreen from "./Screens/ProductScreen";
-import HomeScreen from "./Screens/HomeScreen";
+import ProductScreen from "./screens/ProductScreen";
+import HomeScreen from "./screens/HomeScreen";
 import {BrowserRouter, Route, Link} from "react-router-dom";
 
 function App() {
@@ -41,7 +41,7 @@ function App() {
                 <main className="main">
                     <div className="content">
                         <Route path="/product/:id" component={ProductScreen}/>
-                        <Route path="/"  exact={true} component={HomeScreen}/>
+                        <Route path="/" exact={true} component={HomeScreen}/>
                     </div>
                 </main>
                 <footer className="footer">
