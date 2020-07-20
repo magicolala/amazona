@@ -1,10 +1,16 @@
 import {createStore, combineReducers, compose, applyMiddleware} from "redux";
 import {productDetailsReducer, productListReducer} from "./reducers/productReducers";
 import thunk from "redux-thunk";
-const initialState = {};
+import {cartReducer} from './reducers/cartReducers';
+import Cookie from 'js-cookie';
+
+const cartItems = Cookie.getJSON("cartItems") || [];
+
+const initialState = {cart: {cartItems}};
 const reducer = combineReducers({
     productList: productListReducer,
-    productDetails: productDetailsReducer
+    productDetails: productDetailsReducer,
+    cart: cartReducer
 });
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTESION_COMPOSE__ || compose;
