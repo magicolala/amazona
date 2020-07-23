@@ -8,6 +8,9 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import SigninScreen from "./screens/SigninScreen";
 import { useSelector } from "react-redux";
 import RegisterScreen from "./screens/RegisterScreen";
+import ShippingScreen from "./screens/ShippingScreen";
+import PaymentScreen from "./screens/PaymentScreen";
+import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -33,6 +36,11 @@ function App() {
             ) : (
               <Link to="/signin">Sign In</Link>
             )}
+            {userInfo && userInfo.isAdmin ? (
+              <Link to="/products">Administration</Link>
+            ) : (
+              ""
+            )}
           </div>
         </header>
         <aside className="sidebar">
@@ -52,6 +60,9 @@ function App() {
         <main className="main">
           <div className="content">
             <Route path="/signin" component={SigninScreen} />
+            <Route path="/shipping" component={ShippingScreen} />
+            <Route path="/payment" component={PaymentScreen} />
+            <Route path="/placeorder" component={PlaceOrderScreen} />
             <Route path="/products" component={ProductsScreen} />
             <Route path="/register" component={RegisterScreen} />
             <Route path="/product/:id" component={ProductScreen} />

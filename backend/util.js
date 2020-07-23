@@ -19,7 +19,7 @@ const getToken = (user) => {
 const isAuth = (req, res, next) => {
   const token = req.headers.authorization;
   if (token) {
-    const onlyToken = token.slice(7, tonken.length);
+    const onlyToken = token.slice(7, token.length);
     jwt.verify(onlyToken, config.JWT_SECRET, (err, decode) => {
       if (err) {
         return res.status(401).send({ msg: "Invalid Token" });

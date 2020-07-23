@@ -48,7 +48,7 @@ body {
 .header-links {
     display: flex;
     justify-content: space-around;
-    width: 12rem;
+    width: 22rem;
 }
 
 .header-links a {
@@ -270,7 +270,7 @@ a:hover {
 .cart-list-container li {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     margin-bottom: 1rem;
     border-bottom: .1rem #808080 solid;
 }
@@ -354,6 +354,72 @@ tbody > tr:nth-child(odd) {
     background-color: #f0f0f0;
 }
 
+/*------------------Checkout Steps--------------*/
+.checkout-steps {
+    display: flex;
+    justify-content: space-between;
+    width: 40rem;
+    margin: 1rem auto;
+}
 
+.checkout-steps > div {
+    border-top: .3rem #c0c0c0 solid;
+    color: #c0c0c0;
+    flex: 1 1;
+    padding: 1rem;
+}
+
+.checkout-steps > div.active {
+    border-top: .3rem #f08000 solid;
+    color: #f08000;
+}
+
+/*-------------------Place Order---------------*/
+.placeorder {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+.placeorder-info {
+    flex: 3 1 60rem;
+}
+
+.placeorder-action {
+    flex: 1 1 20rem;
+    border: 0.1rem #c0c0c0 solid;
+    border-radius: 0.5rem;
+    background-color: #fcfcfc;
+    padding: 1rem;
+}
+
+.placeorder-info > div {
+    border: 0.1rem #c0c0c0 solid;
+    border-radius: 0.5rem;
+    background-color: #fcfcfc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.placeorder-info > div:first-child {
+    margin-top: 0;
+}
+
+.placeorder-action > ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.placeorder-action > ul > li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.placeorder-action > ul > li:last-child {
+    font-size: 2rem;
+    color: #c04000;
+}
 
 
